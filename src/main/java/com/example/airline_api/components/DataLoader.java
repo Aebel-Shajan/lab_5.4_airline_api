@@ -25,16 +25,19 @@ public class DataLoader implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        Flight flight1 = new Flight("Peru", 300, "01/01/2001", "00:00");
-        flightRepository.save(flight1);
-
-        Flight flight2 = new Flight("Poland", 200, "01/02/2002", "00:00");
-        flightRepository.save(flight2);
-
         Passenger passenger1 = new Passenger("Aebel", "aebelshajan@gmail.com");
         passengerRepository.save(passenger1);
 
         Passenger passenger2 = new Passenger("ye", "ye@yemail.com");
         passengerRepository.save(passenger2);
+
+        Flight flight1 = new Flight("Peru", 300, "01/01/2001", "00:00");
+        flight1.addPassenger(passenger1);
+        flight1.addPassenger(passenger2);
+        flightRepository.save(flight1);
+
+        Flight flight2 = new Flight("Poland", 200, "01/02/2002", "00:00");
+        flight2.addPassenger(passenger2);
+        flightRepository.save(flight2);
     }
 }
