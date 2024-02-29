@@ -28,7 +28,7 @@ public class FlightService {
         return flightRepository.findById(id);
     }
 
-    public Flight saveFlight(FlightDTO flightDTO) {
+    public Flight addNewFlight(FlightDTO flightDTO) {
 
         Flight flight = new Flight(
                 flightDTO.getDestination(),
@@ -36,14 +36,18 @@ public class FlightService {
                 flightDTO.getDepartureDate(),
                 flightDTO.getDepartureTime()
         );
-//        loop through all estateIds
-//        find the estates by their id
-//        add estates to chocolate object
         for(Long passengerId : flightDTO.getPassengerIds()) {
             Passenger passenger = passengerRepository.findById(passengerId).get();
             flight.addPassenger(passenger);
         }
-//        save chocolate to repo
         return flightRepository.save(flight);
+    }
+
+    public Flight saveFlight(Flight flight) {
+        return flightRepository.save(flight);
+    }
+
+    public void removeFlight(Flight flight) {
+        flightRepository.delete(flight);
     }
 }

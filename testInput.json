@@ -25,16 +25,19 @@
 
   "passengers": [
     {
-      "name": "Aebel",
-      "email": "aebelshajan@gmail.com"
+      "name": "Artemis",
+      "email": "arrr@memail.com",
+      "flightIds": []
     },
     {
       "name": "Bartholemew",
-      "email": "bart@mewmail.com"
+      "email": "bart@mewmail.com",
+      "flightIds": []
     },
     {
       "name": "Cat",
-      "email": "cat@meowmail.com"
+      "email": "cat@meowmail.com",
+      "flightIds": []
     }
   ]
 }

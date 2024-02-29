@@ -28,6 +28,7 @@ public class DataLoader implements ApplicationRunner {
         Passenger passenger1 = new Passenger("Aebel", "aebelshajan@gmail.com");
         passengerRepository.save(passenger1);
 
+//        diff ye not that ye
         Passenger passenger2 = new Passenger("ye", "ye@yemail.com");
         passengerRepository.save(passenger2);
 
