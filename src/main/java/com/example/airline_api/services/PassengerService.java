@@ -1,12 +1,13 @@
 package com.example.airline_api.services;
 
-import com.example.airline_api.repositories.FlightRepositories;
+import com.example.airline_api.repositories.PassengerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FlightServices {
+public class PassengerService {
 
     @Autowired
-    FlightRepositories flightRepositories;
+    PassengerRepository passengerRepository;
+
 }
