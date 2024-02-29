@@ -1,5 +1,6 @@
 package com.example.airline_api.models;
 
+import com.example.airline_api.services.PassengerService;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
@@ -88,5 +89,13 @@ public class Flight {
 
     public void setPassengers(List<Passenger> passengers) {
         this.passengers = passengers;
+    }
+
+    public void addPassenger(Passenger passenger) {
+        this.passengers.add(passenger);
+    }
+
+    public void removePassenger(Passenger passenger) {
+        this.passengers.remove(passenger);
     }
 }
