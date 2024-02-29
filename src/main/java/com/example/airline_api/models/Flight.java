@@ -1,5 +1,6 @@
 package com.example.airline_api.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -15,12 +16,13 @@ public class Flight {
     private String destination;
     @Column
     private int capacity;
-    @Column(name = "departure_data")
+    @Column(name = "departure_date")
     private String departureDate;
-    @Column(name = "departureTime")
+    @Column(name = "departure_time")
     private String departureTime;
 
     @OneToMany(mappedBy = "passenger")
+    @JsonIgnoreProperties("flight")
     private List<Passenger> passengers;
 
     public Flight(String destination, int capacity, String departureDate, String departureTime) {
