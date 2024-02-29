@@ -22,8 +22,4 @@ public class PassengerService {
         return passengerRepository.findById(id);
     }
 
-    public boolean passengerExists(long id) {
-        return passengerRepository.existsById(id);
-    }
-
 }
