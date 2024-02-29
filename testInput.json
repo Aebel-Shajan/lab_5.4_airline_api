@@ -1,0 +1,42 @@
+{
+  "flights": [
+    {
+      "destination": "Angola",
+      "capacity": 3,
+      "departureDate": "01/01/2001",
+      "departureTime": "09:00",
+      "passengerIds": []
+    },
+    {
+      "destination": "Bermuda",
+      "capacity": 4,
+      "departureDate": "02/02/2002",
+      "departureTime": "10:00",
+      "passengerIds": []
+    },
+    {
+      "destination": "Croatia",
+      "capacity": 5,
+      "departureDate": "03/03/2003",
+      "departureTime": "11:00",
+      "passengerIds": []
+    }
+  ],
+
+  "passengers": [
+    {
+      "name": "Aebel",
+      "email": "aebelshajan@gmail.com"
+    },
+    {
+      "name": "Bartholemew",
+      "email": "bart@mewmail.com"
+    },
+    {
+      "name": "Cat",
+      "email": "cat@meowmail.com"
+    }
+  ]
+}
+
+
